@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Sub Stats</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Atk</th>
+      <th>Matk</th>
+      <th>Def</th>
+      <th>Mdef</th>
+      <th>Hit</th>
+      <th>Crit</th>
+      <th>Flee</th>
+      <th>Aspd</th>
+      <th>Hp</th>
+      <th>Sp</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @sub_stats.each do |sub_stat| %>
+      <tr>
+        <td><%= sub_stat.atk %></td>
+        <td><%= sub_stat.matk %></td>
+        <td><%= sub_stat.def %></td>
+        <td><%= sub_stat.mdef %></td>
+        <td><%= sub_stat.hit %></td>
+        <td><%= sub_stat.crit %></td>
+        <td><%= sub_stat.flee %></td>
+        <td><%= sub_stat.aspd %></td>
+        <td><%= sub_stat.hp %></td>
+        <td><%= sub_stat.sp %></td>
+        <td><%= link_to 'Show', sub_stat %></td>
+        <td><%= link_to 'Edit', edit_sub_stat_path(sub_stat) %></td>
+        <td><%= link_to 'Destroy', sub_stat, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Sub Stat', new_sub_stat_path %>

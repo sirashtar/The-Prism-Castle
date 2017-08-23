@@ -1,0 +1,67 @@
+<%= form_with(model: status_change_resistance, local: true) do |form| %>
+  <% if status_change_resistance.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(status_change_resistance.errors.count, "error") %> prohibited this status_change_resistance from being saved:</h2>
+
+      <ul>
+      <% status_change_resistance.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :stun %>
+    <%= form.number_field :stun, id: :status_change_resistance_stun %>
+  </div>
+
+  <div class="field">
+    <%= form.label :poison %>
+    <%= form.number_field :poison, id: :status_change_resistance_poison %>
+  </div>
+
+  <div class="field">
+    <%= form.label :silence %>
+    <%= form.number_field :silence, id: :status_change_resistance_silence %>
+  </div>
+
+  <div class="field">
+    <%= form.label :bleeding %>
+    <%= form.number_field :bleeding, id: :status_change_resistance_bleeding %>
+  </div>
+
+  <div class="field">
+    <%= form.label :sleep %>
+    <%= form.number_field :sleep, id: :status_change_resistance_sleep %>
+  </div>
+
+  <div class="field">
+    <%= form.label :stone_curse %>
+    <%= form.number_field :stone_curse, id: :status_change_resistance_stone_curse %>
+  </div>
+
+  <div class="field">
+    <%= form.label :freeze %>
+    <%= form.number_field :freeze, id: :status_change_resistance_freeze %>
+  </div>
+
+  <div class="field">
+    <%= form.label :curse %>
+    <%= form.number_field :curse, id: :status_change_resistance_curse %>
+  </div>
+
+  <div class="field">
+    <%= form.label :blind %>
+    <%= form.number_field :blind, id: :status_change_resistance_blind %>
+  </div>
+
+  <div class="field">
+    <%= form.label :confusion %>
+    <%= form.number_field :confusion, id: :status_change_resistance_confusion %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

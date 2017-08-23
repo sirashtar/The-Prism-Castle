@@ -1,0 +1,2 @@
+module QuasiStatsHelper
+end

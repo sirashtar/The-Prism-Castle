@@ -1,0 +1,67 @@
+<%= form_with(model: sub_stat, local: true) do |form| %>
+  <% if sub_stat.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(sub_stat.errors.count, "error") %> prohibited this sub_stat from being saved:</h2>
+
+      <ul>
+      <% sub_stat.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :atk %>
+    <%= form.number_field :atk, id: :sub_stat_atk %>
+  </div>
+
+  <div class="field">
+    <%= form.label :matk %>
+    <%= form.number_field :matk, id: :sub_stat_matk %>
+  </div>
+
+  <div class="field">
+    <%= form.label :def %>
+    <%= form.number_field :def, id: :sub_stat_def %>
+  </div>
+
+  <div class="field">
+    <%= form.label :mdef %>
+    <%= form.number_field :mdef, id: :sub_stat_mdef %>
+  </div>
+
+  <div class="field">
+    <%= form.label :hit %>
+    <%= form.number_field :hit, id: :sub_stat_hit %>
+  </div>
+
+  <div class="field">
+    <%= form.label :crit %>
+    <%= form.number_field :crit, id: :sub_stat_crit %>
+  </div>
+
+  <div class="field">
+    <%= form.label :flee %>
+    <%= form.number_field :flee, id: :sub_stat_flee %>
+  </div>
+
+  <div class="field">
+    <%= form.label :aspd %>
+    <%= form.number_field :aspd, id: :sub_stat_aspd %>
+  </div>
+
+  <div class="field">
+    <%= form.label :hp %>
+    <%= form.number_field :hp, id: :sub_stat_hp %>
+  </div>
+
+  <div class="field">
+    <%= form.label :sp %>
+    <%= form.number_field :sp, id: :sub_stat_sp %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

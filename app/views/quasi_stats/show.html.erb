@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Atk range:</strong>
+  <%= @quasi_stat.atk_range %>
+</p>
+
+<p>
+  <strong>Cast time:</strong>
+  <%= @quasi_stat.cast_time %>
+</p>
+
+<p>
+  <strong>Weight limit:</strong>
+  <%= @quasi_stat.weight_limit %>
+</p>
+
+<p>
+  <strong>Energy:</strong>
+  <%= @quasi_stat.energy %>
+</p>
+
+<%= link_to 'Edit', edit_quasi_stat_path(@quasi_stat) %> |
+<%= link_to 'Back', quasi_stats_path %>

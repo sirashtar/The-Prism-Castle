@@ -1,0 +1,2 @@
+module SubStatsHelper
+end

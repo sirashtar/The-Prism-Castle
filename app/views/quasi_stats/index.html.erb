@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Quasi Stats</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Atk range</th>
+      <th>Cast time</th>
+      <th>Weight limit</th>
+      <th>Energy</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @quasi_stats.each do |quasi_stat| %>
+      <tr>
+        <td><%= quasi_stat.atk_range %></td>
+        <td><%= quasi_stat.cast_time %></td>
+        <td><%= quasi_stat.weight_limit %></td>
+        <td><%= quasi_stat.energy %></td>
+        <td><%= link_to 'Show', quasi_stat %></td>
+        <td><%= link_to 'Edit', edit_quasi_stat_path(quasi_stat) %></td>
+        <td><%= link_to 'Destroy', quasi_stat, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Quasi Stat', new_quasi_stat_path %>

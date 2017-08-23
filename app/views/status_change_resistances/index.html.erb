@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Status Change Resistances</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Stun</th>
+      <th>Poison</th>
+      <th>Silence</th>
+      <th>Bleeding</th>
+      <th>Sleep</th>
+      <th>Stone curse</th>
+      <th>Freeze</th>
+      <th>Curse</th>
+      <th>Blind</th>
+      <th>Confusion</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @status_change_resistances.each do |status_change_resistance| %>
+      <tr>
+        <td><%= status_change_resistance.stun %></td>
+        <td><%= status_change_resistance.poison %></td>
+        <td><%= status_change_resistance.silence %></td>
+        <td><%= status_change_resistance.bleeding %></td>
+        <td><%= status_change_resistance.sleep %></td>
+        <td><%= status_change_resistance.stone_curse %></td>
+        <td><%= status_change_resistance.freeze %></td>
+        <td><%= status_change_resistance.curse %></td>
+        <td><%= status_change_resistance.blind %></td>
+        <td><%= status_change_resistance.confusion %></td>
+        <td><%= link_to 'Show', status_change_resistance %></td>
+        <td><%= link_to 'Edit', edit_status_change_resistance_path(status_change_resistance) %></td>
+        <td><%= link_to 'Destroy', status_change_resistance, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Status Change Resistance', new_status_change_resistance_path %>

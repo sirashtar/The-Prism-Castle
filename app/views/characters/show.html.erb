@@ -1,14 +1,120 @@
 <p id="notice"><%= notice %></p>
+<div>
+	<h1>
+	  <strong>Name:</strong>
+	  <%= @character.name %>
+	</h1>
 
-<p>
-  <strong>Name:</strong>
-  <%= @character.name %>
-</p>
+	<p>
+	  <strong>Gender:</strong>
+	  <%= @character.gender %>
+	</p>
 
-<p>
-  <strong>Gender:</strong>
-  <%= @character.gender %>
-</p>
+	<p>
+	  <strong>Job:</strong>
+	  <%= @character.job.name %>
+	</p>
 
+	<p>
+	  <strong>LVL (Level):</strong>
+	  <%= @character.level %>
+	</p>
+
+	<p>
+	  <strong>EXP (Experience):</strong>
+	  <%= @character.experience %>
+	</p>
+</div>
+<div class="col-md-3">
+	<h2>
+		<strong>Stats:</strong>
+	</h2>
+
+	<p>
+	  <strong>STR (Stregth):</strong>
+	  <%= @character.stat.str %>
+	</p>
+
+	<p>
+	  <strong>AGI (Agility):</strong>
+	  <%= @character.stat.agi %>
+	</p>
+
+	<p>
+	  <strong>VIT (Vitality):</strong>
+	  <%= @character.stat.vit %>
+	</p>
+
+	<p>
+	  <strong>INT (Intelligence):</strong>
+	  <%= @character.stat.int %>
+	</p>
+
+	<p>
+	  <strong>DEX (Dexterity):</strong>
+	  <%= @character.stat.dex %>
+	</p>
+
+	<p>
+	  <strong>LUK (Luck):</strong>
+	  <%= @character.stat.luk %>
+	</p>
+</div>
+<div>
+	<h2>
+		<strong>Substats:</strong>
+	</h2>
+
+	<p>
+	  <strong>ATK (Attack):</strong>
+	  <%= @character.stat.luk %>
+	</p>
+
+	<p>
+	  <strong>MATK (Magic Attack):</strong>
+	  <%= @character.stat.luk %>
+	</p>
+
+	<p>
+	  <strong>DEF (Defense):</strong>
+	  
+	  <%= @character.stat.luk %>
+	</p>
+
+	<p>
+	  <strong>MDEF (Magic Defense):</strong>
+	  <%= @character.stat.luk %>
+	</p>
+
+	<p>
+	  <strong>HIT (Hit rate):</strong>
+	  <%= @character.stat.luk %>
+	</p>
+
+	<p>
+	  <strong>CRIT (Critical Hit Rate):</strong>
+	  <%= @character.stat.luk %>
+	</p>
+
+	<p>
+	  <strong>FLEE (Flee rate):</strong>
+	  <%= @character.stat.luk %>
+	</p>
+
+	<p>
+	  <strong>ASPD (Attack Speed):</strong>
+	  <%= @character.stat.luk %>
+	</p>
+
+	<p>
+	  <strong>HP (Health Points):</strong>
+	  <%= @character.stat.luk %>
+	</p>
+
+	<p>
+	  <strong>SP (Spell Power):</strong>
+	  <%= @character.stat.luk %>
+	</p>
+</div>
 <%= link_to 'Edit', edit_character_path(@character) %> |
 <%= link_to 'Back', characters_path %>

@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  description: MyText
+  type: 
+  subtype: MyString
+  weight: 1
+  buy_shop: false
+  required_level: 1
+  buying_price: 1
+  selling_price: 1
+
+two:
+  title: MyString
+  description: MyText
+  type: 
+  subtype: MyString
+  weight: 1
+  buy_shop: false
+  required_level: 1
+  buying_price: 1
+  selling_price: 1

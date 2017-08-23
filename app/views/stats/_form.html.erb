@@ -1,0 +1,47 @@
+<%= form_with(model: stat, local: true) do |form| %>
+  <% if stat.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(stat.errors.count, "error") %> prohibited this stat from being saved:</h2>
+
+      <ul>
+      <% stat.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :str %>
+    <%= form.number_field :str, id: :stat_str %>
+  </div>
+
+  <div class="field">
+    <%= form.label :agi %>
+    <%= form.number_field :agi, id: :stat_agi %>
+  </div>
+
+  <div class="field">
+    <%= form.label :vit %>
+    <%= form.number_field :vit, id: :stat_vit %>
+  </div>
+
+  <div class="field">
+    <%= form.label :int %>
+    <%= form.number_field :int, id: :stat_int %>
+  </div>
+
+  <div class="field">
+    <%= form.label :dex %>
+    <%= form.number_field :dex, id: :stat_dex %>
+  </div>
+
+  <div class="field">
+    <%= form.label :luk %>
+    <%= form.number_field :luk, id: :stat_luk %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

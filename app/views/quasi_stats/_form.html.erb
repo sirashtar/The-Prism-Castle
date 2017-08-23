@@ -1,0 +1,37 @@
+<%= form_with(model: quasi_stat, local: true) do |form| %>
+  <% if quasi_stat.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(quasi_stat.errors.count, "error") %> prohibited this quasi_stat from being saved:</h2>
+
+      <ul>
+      <% quasi_stat.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :atk_range %>
+    <%= form.number_field :atk_range, id: :quasi_stat_atk_range %>
+  </div>
+
+  <div class="field">
+    <%= form.label :cast_time %>
+    <%= form.number_field :cast_time, id: :quasi_stat_cast_time %>
+  </div>
+
+  <div class="field">
+    <%= form.label :weight_limit %>
+    <%= form.number_field :weight_limit, id: :quasi_stat_weight_limit %>
+  </div>
+
+  <div class="field">
+    <%= form.label :energy %>
+    <%= form.number_field :energy, id: :quasi_stat_energy %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

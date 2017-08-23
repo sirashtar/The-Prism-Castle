@@ -1,0 +1,2 @@
+class StatusChangeResistance < ApplicationRecord
+end

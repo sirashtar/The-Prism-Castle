@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  atk_range: 1
+  cast_time: 1
+  weight_limit: 1
+  energy: 1
+
+two:
+  atk_range: 1
+  cast_time: 1
+  weight_limit: 1
+  energy: 1
